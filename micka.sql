@@ -1,0 +1,14 @@
+# test
+use dataia_Nancy;
+
+ALTER TABLE projetA
+ADD id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
+
+ALTER TABLE projetB
+ADD id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
+
+CREATE table projetC
+as
+SELECT *
+FROM projetA
+NATURAL JOIN projetB;
